@@ -1,0 +1,70 @@
+<html>
+<head>
+  
+  <meta charset="UTF-8">
+  <!-- I linked the p5.js files needed from online source... need to change to my local source soon-->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="drawer.js"></script>
+
+  <link rel = "icon" href = "./imgs/rainbow.png">
+  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/p5.dom.js"></script>
+  <script language="javascript" type="text/javascript" src="path/to/p5.dom.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  
+ <!--  <script src="centerInstruction.js"></script> -->
+
+
+  <script language="javascript" type="text/javascript" src="chromosome.js"></script>
+  <script language="javascript" type="text/javascript" src="Population.js"></script>
+  
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+</head>
+
+<body>
+  <div id="title">THE GENETIC RAINBOW</div>
+  <div id="generations"></div>
+  <div id="completion-statement"></div>
+
+ <div id="instruction-stuff">
+    <h2><b><u>Keep in mind the things which can alter your progress: </u></b></h2>
+    <ul>  
+      <li>A high mutation rate would ultimately lead to the equivalence of just random selection; meaning your rainbow creations will continue forever. We want just enough mutation in our mating pools, but not too much. So to keep our generations from premature convergence on some optimal solution!</li>
+      <li>A larger population will breed more diversity; bringing up the possibility of a much needed mutation or sequence. And so, seem very tantalizing. But what should be kept in mind is that if our population were to get big, calculations could start to become to tedious to handle. Population sized of 1000 to 5000 could easily get the job done in a situation like this!</li>
+      <li> We find a good point of balance with a relatively low mutation rate (around .01 to .1) and a relatively high (but not needlessly high) population size (around 50 to 500). This in turn will give us a good variation of constituents, with a dash of mutative dissimilarities in order to bypass any local optima</li>
+    </ul>
+ </div>
+
+
+
+ <div id="sliders">
+  <div id="slidercontainer1">
+    <span id = "name1">pop. size</span><!-- <input type="range" min="1" max="1000" value="100" class="slider" id="gen"> -->
+  </div>
+  <div id="slidercontainer2">
+    <span id = "name2">mutation rate</span><!-- <input type="range" min="1" max="100" value="5" class="slider" id="mutation"> -->
+  </div>
+</div>
+
+  <div id="slider-values">
+    <div id="gen-values"></div>
+    <br>
+    <br>
+    <div id="mutation-values"></div>
+  </div>
+
+  <div id="button-holder">
+    <!-- <button type="button">START</button> -->
+  </div>
+
+
+
+</body>
+
+  <script src="updateSliders.js"></script>
+
+
+</html>
